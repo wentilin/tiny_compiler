@@ -20,7 +20,7 @@ static int bufsize = 0;
 
 static char getNextChar() {
     if (linepos >= bufsize) {
-        linepos++;
+        lineno++;
 
         if (fgets(lineBuf, BUFLEN-1, source)) {
             if (EchoSource) {
@@ -172,7 +172,7 @@ TokenType getToken() {
         }
 
         if ((save) && (tokenStringIndex <= MAXTOKENLEN)) {
-            tokenString[tokenStringIndex++] = 'c';
+            tokenString[tokenStringIndex++] = c;
         }
 
         if (state == DONE) {
