@@ -47,7 +47,7 @@ static struct {
     char *str;
     TokenType tok;
 } reservedWords[MAXRESERVED] = {
-    {"IF", IF}, 
+    {"if", IF},
     {"then", THEN},
     {"else", ELSE},
     {"end", END},
