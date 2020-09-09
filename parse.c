@@ -125,7 +125,9 @@ static TreeNode *assign_stmt(void) {
     if (t != NULL) {
         t->child[0] = exp();
     }
-
+    
+    match(SEMI);
+    
     return t;
 }
 
@@ -151,9 +153,7 @@ TreeNode *t = newStmtNode(WriteK);
     if (t != NULL && token == ID) {
         t->child[0] = exp();
     }
-
-    match(ID);
-
+    match(SEMI);
     return t;
 }
 
