@@ -40,7 +40,6 @@ void printToken(TokenType tokenType, const char *tokenString) {
 
 TreeNode *newStmtNode(StmtKind kind) {
     TreeNode *t = (TreeNode *)malloc(sizeof(TreeNode));
-    int i;
     if (t == NULL) {
         fprintf(listing, "Out of memory error at line %d\n", lineno);
     } else {
@@ -77,7 +76,7 @@ TreeNode *newExpNode(ExpKind kind) {
 }
 
 char *copyString(char *s) {
-    int n;
+    size_t n;
     char *t;
     if (s == NULL) {
         return NULL;
@@ -106,7 +105,6 @@ static void printSpaces() {
 }
 
 void printTree(TreeNode *tree) {
-    int i;
     INDENT;
     while (tree != NULL) {
         printSpaces();
@@ -133,7 +131,7 @@ void printTree(TreeNode *tree) {
         } else if (tree->nodeKind == ExpK) {
             switch (tree->kind.exp) {
                 case OpK:
-                    fprintf(listing, "Op: \n");
+                    fprintf(listing, "Op: ");
                     printToken(tree->attr.op, "\0");
                     break;
                 case ConstK:

@@ -126,8 +126,6 @@ static TreeNode *assign_stmt(void) {
         t->child[0] = exp();
     }
     
-    match(SEMI);
-    
     return t;
 }
 
@@ -153,7 +151,7 @@ TreeNode *t = newStmtNode(WriteK);
     if (t != NULL && token == ID) {
         t->child[0] = exp();
     }
-    match(SEMI);
+    
     return t;
 }
 
@@ -201,7 +199,7 @@ static TreeNode *term(void) {
         TreeNode *p = newExpNode(OpK);
         if (p != NULL) {
             p->child[0] = t;
-            t->attr.op = token;
+            p->attr.op = token;
             t = p;
             match(token);
             t->child[1] = factor();
