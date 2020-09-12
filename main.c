@@ -24,27 +24,27 @@ int Error = FALSE;
 int main(int argc, char const *argv[]) {
     // source code file
     TreeNode *syntaxTree;
-//    char pgm[100];
-//
-//    if (argc != 2) {
-//        fprintf(stderr, "usage: %s <filename>\n", argv[0]);
-//        exit(1);
-//    }
-//
-//    strcpy(pgm, argv[1]);
-//    if (strchr(pgm, '.') == NULL) {
-//        strcat(pgm, ".tny");
-//    }
+    char pgm[100];
 
-    source = fopen("/Users/ws/Desktop/opensources/tiny_compiler/tiny_codes/sample.tny", "r");
-//    if (source == NULL) {
-//        fprintf(stderr, "File %s not found.\n", pgm);
-//        exit(1);
-//    }
+    if (argc != 2) {
+        fprintf(stderr, "usage: %s <filename>\n", argv[0]);
+        exit(1);
+    }
+
+    strcpy(pgm, argv[1]);
+    if (strchr(pgm, '.') == NULL) {
+        strcat(pgm, ".tny");
+    }
+
+    source = fopen(pgm, "r");
+    if (source == NULL) {
+        fprintf(stderr, "File %s not found.\n", pgm);
+        exit(1);
+    }
 
     listing = stdout;
 
-//    fprintf(listing, "TINY COMPILATION: %s\n", pgm);
+    fprintf(listing, "TINY COMPILATION: %s\n", pgm);
 
     #if NO_PARSE
     while (getToken() != ENDFILE);
