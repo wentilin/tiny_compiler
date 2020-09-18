@@ -1,5 +1,6 @@
 #include "globals.h"
 #include "util.h"
+#include "analyze.h"
 
 #define NO_PARSE FALSE
 
@@ -54,6 +55,10 @@ int main(int argc, char const *argv[]) {
         fprintf(listing, "\nSyntax tree: \n");
         printTree(syntaxTree);
     }
+    
+    buildSymtab(syntaxTree);
+    typeCheck(syntaxTree);
+    
     #endif
     return 0;
 }
