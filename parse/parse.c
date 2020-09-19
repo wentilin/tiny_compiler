@@ -182,7 +182,7 @@ static TreeNode *simple_exp(void) {
         TreeNode *p = newExpNode(OpK);
         if (p != NULL) {
             p->child[0] = t;
-            t->attr.op = token;
+            p->attr.op = token;
             t = p;
             match(token);
             t->child[1] = term();
