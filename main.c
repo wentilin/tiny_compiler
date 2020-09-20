@@ -1,6 +1,7 @@
 #include "globals.h"
 #include "util.h"
 #include "analyze.h"
+#include "mem.h"
 
 #define NO_PARSE FALSE
 
@@ -59,6 +60,8 @@ int main(int argc, char const *argv[]) {
     buildSymtab(syntaxTree);
     typeCheck(syntaxTree);
     
+    TreeNode *node = (TreeNode *)m_malloc(sizeof(TreeNode));
+    m_free(node);
     #endif
     return 0;
 }

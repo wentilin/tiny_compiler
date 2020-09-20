@@ -13,6 +13,7 @@
 		54716887250C6E29000A039A /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 54716882250C6E29000A039A /* util.c */; };
 		54D9A13B2514A21000132205 /* symtab.c in Sources */ = {isa = PBXBuildFile; fileRef = 54D9A13A2514A21000132205 /* symtab.c */; };
 		54D9A13E2514B60500132205 /* analyze.c in Sources */ = {isa = PBXBuildFile; fileRef = 54D9A13D2514B60500132205 /* analyze.c */; };
+		D7AD3C742517843B008DE443 /* mem.c in Sources */ = {isa = PBXBuildFile; fileRef = D7AD3C732517843B008DE443 /* mem.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		54D9A13A2514A21000132205 /* symtab.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = symtab.c; sourceTree = "<group>"; };
 		54D9A13C2514B60500132205 /* analyze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = analyze.h; sourceTree = "<group>"; };
 		54D9A13D2514B60500132205 /* analyze.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = analyze.c; sourceTree = "<group>"; };
+		D7AD3C722517843B008DE443 /* mem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		D7AD3C732517843B008DE443 /* mem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mem.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				5471687D250C6E29000A039A /* globals.h */,
+				D7AD3C722517843B008DE443 /* mem.h */,
+				D7AD3C732517843B008DE443 /* mem.c */,
 			);
 			path = common;
 			sourceTree = SOURCE_ROOT;
@@ -198,6 +203,7 @@
 			files = (
 				54716886250C6E29000A039A /* parse.c in Sources */,
 				54D9A13B2514A21000132205 /* symtab.c in Sources */,
+				D7AD3C742517843B008DE443 /* mem.c in Sources */,
 				54D9A13E2514B60500132205 /* analyze.c in Sources */,
 				54716887250C6E29000A039A /* util.c in Sources */,
 				54716885250C6E29000A039A /* main.c in Sources */,
@@ -321,7 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8VBF894SB3;
+				DEVELOPMENT_TEAM = 4EG25ZT9T6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -331,7 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8VBF894SB3;
+				DEVELOPMENT_TEAM = 4EG25ZT9T6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
